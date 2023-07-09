@@ -9,6 +9,7 @@ import datetime
 
 
 def do_pack():
+    """Implemented do_pack"""
     ctime = datetime.datetime.now()
     time_format = ctime.strftime("%Y%m%d%H%M%S")
     version_n = "versions/web_static_{}.tgz".format(time_format)
