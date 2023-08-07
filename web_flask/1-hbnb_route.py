@@ -6,6 +6,7 @@ Creates flask application with two routings
 from flask import Flask
 app = Flask(__name__)
 
+
 @app.route('/')
 def hello():
     """Returns string when route /

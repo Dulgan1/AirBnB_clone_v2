@@ -16,7 +16,7 @@ def do_pack():
 
     try:
         local("mkdir -p versions")
-        local("tar -cvzf {} web_static".format(version_n))
+        local("tar -cvzf {} web_static/".format(version_n))
         return version_n
     except:
         return None
