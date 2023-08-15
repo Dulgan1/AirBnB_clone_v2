@@ -13,7 +13,9 @@ sudo echo "\
   </body>
 </html>" > /data/web_static/releases/test/index.html
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
-sudo chown -R ubuntu:ubuntu /data/
+sudo chown -hR ubuntu:ubuntu /data/
+
 CONFIG="\n\tlocation \/hbnb_static\/ {\n\t\talias \/data\/web_static\/current\/;\n\t\tautoindex off;\n\t}"
-sudo sed -i "64i $CONFIG" /etc/nginx/sites-available/default
+sudo sed -i "s/hbnb_static/hbnb_static$RANDOM/" /etc/nginx/sites-available/default
+sudo sed -i "64i\\$CONFIG" /etc/nginx/sites-available/default
 service nginx restart
