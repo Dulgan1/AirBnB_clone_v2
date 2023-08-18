@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
     Creates flask application with routings and rendering
+    for task 6
 """
+
 from flask import Flask, render_template
 app.url_map.strict_slashes = False
 app = Flask(__name__)
