@@ -2,7 +2,6 @@
 """
     Creates flask application with routings and rendering
 """
-
 from flask import Flask, render_template
 app.url_map.strict_slashes = False
 app = Flask(__name__)
@@ -64,6 +63,7 @@ def number_odd_or_even(n):
     """
     temp = '6-number_odd_or_even.html'
     return render_template(temp, n=n)
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
