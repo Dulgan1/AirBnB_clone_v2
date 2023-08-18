@@ -30,7 +30,7 @@ def do_deploy(archive_path):
         run("rm /tmp/{}".format(new_name))
         run("mv {}web_static/* {}".format(path_to_tar, path_to_tar))
         run("rm -rf {}".format(sym_link))
-        run("ln -s {} {}".format(path_tar, sym_link))
+        run("ln -s {} {}".format(path_to_tar, sym_link))
         return True
     except:
         return False
